@@ -66,17 +66,17 @@ const Guidelines: React.FC = () => {
   ];
   
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419] text-white py-16 md:py-20 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep text-white py-16 md:py-20 overflow-hidden">
+        {/* Animated Background - unified blue atmosphere */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               RULES & REGULATIONS
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -91,14 +91,14 @@ const Guidelines: React.FC = () => {
       
       {/* Important Notice */}
       <section className="relative py-8 border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-academic-gold/5 via-academic-gold/10 to-academic-gold/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pp-gold/5 via-pp-gold/10 to-pp-gold/5"></div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
-              <div className="relative bg-gradient-to-br from-academic-gold/10 to-yellow-500/5 backdrop-blur-md border border-academic-gold/30 rounded-2xl p-6 text-center">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-pp-gold/10 to-pp-gold-light/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6 text-center">
                 <p className="text-sm md:text-base text-gray-300">
-                  <strong className="text-academic-gold">Please read all guidelines carefully.</strong> Adherence to these guidelines 
+                  <strong className="text-pp-gold">Please read all guidelines carefully.</strong> Adherence to these guidelines 
                   is mandatory for all participants. Violation may result in disqualification.
                 </p>
               </div>
@@ -115,10 +115,10 @@ const Guidelines: React.FC = () => {
           <div className="max-w-4xl mx-auto space-y-6">
             {sections.map((section, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                   <div className="flex items-start space-x-4 mb-6">
-                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-academic-gold to-yellow-600 text-navy-900 rounded-full flex items-center justify-center font-bold shadow-lg">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-pp-gold to-pp-gold-dark text-pp-background-deep rounded-full flex items-center justify-center font-bold shadow-lg">
                       {index + 1}
                     </div>
                     <h2 className="text-2xl font-display font-bold text-white mt-1">
@@ -129,7 +129,7 @@ const Guidelines: React.FC = () => {
                   <ul className="space-y-3 ml-14">
                     {section.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
-                        <span className="flex-shrink-0 w-2 h-2 bg-academic-gold rounded-full mt-2"></span>
+                        <span className="flex-shrink-0 w-2 h-2 bg-pp-gold rounded-full mt-2"></span>
                         <span className="text-gray-300 leading-relaxed">{item}</span>
                       </li>
                     ))}
@@ -143,12 +143,12 @@ const Guidelines: React.FC = () => {
       
       {/* Additional Information */}
       <section className="relative py-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-academic-gold/5 to-yellow-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-gold/5 to-pp-gold-light/5"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">Need More Information?</h3>
                 <p className="text-gray-300 mb-6">
@@ -156,7 +156,7 @@ const Guidelines: React.FC = () => {
                   please refer to individual event pages or contact our coordinators.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a href="/events" className="px-8 py-4 bg-gradient-to-r from-academic-gold to-yellow-500 text-navy-900 font-bold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-academic-gold/50 w-full sm:w-auto">
+                  <a href="/events" className="px-8 py-4 bg-gradient-to-r from-pp-gold to-pp-gold-light text-pp-background-deep font-bold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-pp-gold/50 w-full sm:w-auto">
                     VIEW EVENTS
                   </a>
                   <a href="/contact" className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-bold rounded-xl hover:bg-white/10 hover:border-white transition-all duration-300 w-full sm:w-auto">

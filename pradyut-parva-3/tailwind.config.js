@@ -7,50 +7,68 @@ export default {
   theme: {
     extend: {
       colors: {
-        'navy': {
-          50: '#e8eaf2',
-          100: '#d1d5e5',
-          200: '#a3abcb',
-          300: '#7581b1',
-          400: '#475797',
-          500: '#192d7d',
-          600: '#142464',
-          700: '#0f1b4b',
-          800: '#0a1232',
-          900: '#050919',
+        // GLOBAL MASTER PRADYUT PARVA 3 COLOR SYSTEM
+        pp: {
+          // Backgrounds
+          'bg': '#0b1126',
+          'bg-deep': '#070d1d',
+          'bg-light': '#111b38',
+          
+          // Surfaces
+          'surface': '#111b38',
+          'surface-hover': '#172344',
+          'surface-light': 'rgba(17, 27, 56, 0.6)',
+          
+          // Gold - Main Accent
+          'gold': '#f2c438',
+          'gold-light': '#ffd95a',
+          'gold-dark': '#d4a827',
+          
+          // Blue/Cyan - Supporting Accent
+          'blue': '#2f6fff',
+          'cyan': '#25c9ff',
+          
+          // Typography
+          'text': '#f5f7fb',
+          'text-muted': '#a7afc2',
+          'text-dim': '#707896',
+          
+          // Borders
+          'border': 'rgba(130, 155, 210, 0.18)',
+          'border-hover': 'rgba(130, 155, 210, 0.35)',
         },
-        'institutional-blue': '#003366',
-        'ieee-blue': '#00629B',
-        'academic-gold': '#C5A572',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
         'display': ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
       animation: {
-        'gradient-shift': 'gradientShift 15s ease infinite',
         'gradient-x': 'gradientX 3s linear infinite',
-        'blob': 'blob 7s infinite',
         'float': 'float linear infinite',
+        'float-slow': 'floatSlow 20s ease-in-out infinite',
+        'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
       },
       keyframes: {
-        gradientShift: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
         gradientX: {
           '0%, 100%': { backgroundPosition: '0% center' },
           '50%': { backgroundPosition: '100% center' },
         },
-        blob: {
-          '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-        },
         float: {
           '0%': { transform: 'translateY(0px) translateX(0px)', opacity: '0' },
-          '50%': { opacity: '1' },
-          '100%': { transform: 'translateY(-100vh) translateX(50px)', opacity: '0' },
+          '10%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { transform: 'translateY(-100vh) translateX(30px)', opacity: '0' },
+        },
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.7' },
         },
       },
     },

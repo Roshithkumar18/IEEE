@@ -5,17 +5,17 @@ import { MapPinIcon, CalendarIcon } from '../components/Icons';
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419] text-white py-16 md:py-20 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep text-white py-16 md:py-20 overflow-hidden">
+        {/* Animated Background - unified blue atmosphere */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               GET IN TOUCH
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -37,11 +37,11 @@ const Contact: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               {/* Venue Information */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                      <MapPinIcon className="text-blue-400" size={24} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-pp-primary/20 rounded-xl flex items-center justify-center">
+                      <MapPinIcon className="text-pp-primary" size={24} />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-2">Venue</h3>
@@ -54,11 +54,11 @@ const Contact: React.FC = () => {
               
               {/* Date Information */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-academic-gold/20 rounded-xl flex items-center justify-center">
-                      <CalendarIcon className="text-academic-gold" size={24} />
+                    <div className="flex-shrink-0 w-12 h-12 bg-pp-gold/20 rounded-xl flex items-center justify-center">
+                      <CalendarIcon className="text-pp-gold" size={24} />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white mb-2">Event Dates</h3>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
             
             {/* Website Links */}
             <div className="relative group mb-12">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
                 <h3 className="text-xl font-bold text-white mb-6">Official Links</h3>
                 <div className="grid md:grid-cols-3 gap-6">
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
                       href={`https://${siteConfig.websiteUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-academic-gold hover:text-yellow-500 font-medium transition-colors break-all"
+                      className="text-pp-gold hover:text-pp-gold-light font-medium transition-colors break-all"
                     >
                       {siteConfig.websiteUrl}
                     </a>
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                       href={siteConfig.registrationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-academic-gold hover:text-yellow-500 font-medium transition-colors break-all"
+                      className="text-pp-gold hover:text-pp-gold-light font-medium transition-colors break-all"
                     >
                       Register Now
                     </a>
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                       href={`https://${siteConfig.eventsUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-academic-gold hover:text-yellow-500 font-medium transition-colors break-all"
+                      className="text-pp-gold hover:text-pp-gold-light font-medium transition-colors break-all"
                     >
                       {siteConfig.eventsUrl}
                     </a>
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
       
       {/* Coordinators */}
       <section className="relative py-12 md:py-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-primary/5 to-pp-primary/10"></div>
         
         <div className="section-container relative z-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white text-center mb-12">Contact Coordinators</h2>
@@ -126,14 +126,14 @@ const Contact: React.FC = () => {
           <div className="max-w-5xl mx-auto space-y-12">
             {/* Faculty Coordinators */}
             <div>
-              <h3 className="text-xl font-bold text-blue-400 mb-6 text-center">Faculty Coordinators</h3>
+              <h3 className="text-xl font-bold text-pp-primary mb-6 text-center">Faculty Coordinators</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {facultyCoordinators.map((person, index) => (
                   <div key={index} className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                     <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                       <h4 className="text-lg font-bold text-white mb-1">{person.name}</h4>
-                      <p className="text-sm text-academic-gold font-semibold mb-3">{person.role}</p>
+                      <p className="text-sm text-pp-gold font-semibold mb-3">{person.role}</p>
                       <p className="text-xs text-gray-400">
                         For queries, please contact through official channels
                       </p>
@@ -145,14 +145,14 @@ const Contact: React.FC = () => {
             
             {/* Student Coordinators */}
             <div>
-              <h3 className="text-xl font-bold text-purple-400 mb-6 text-center">Student Coordinators</h3>
+              <h3 className="text-xl font-bold text-pp-gold mb-6 text-center">Student Coordinators</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {studentCoordinators.map((person, index) => (
                   <div key={index} className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold-light/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                     <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                       <h4 className="text-lg font-bold text-white mb-1">{person.name}</h4>
-                      <p className="text-sm text-academic-gold font-semibold">{person.department}</p>
+                      <p className="text-sm text-pp-gold font-semibold">{person.department}</p>
                     </div>
                   </div>
                 ))}
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {/* Website QR Code */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/30 to-pp-primary/40 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                   <div className="w-48 h-48 mx-auto bg-white rounded-xl p-3 mb-4">
                     <img 
@@ -185,15 +185,15 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <h4 className="font-bold text-white mb-2 text-lg">Visit Website</h4>
-                  <p className="text-sm text-academic-gold font-medium mb-1">{siteConfig.websiteUrl}</p>
+                  <p className="text-sm text-pp-gold font-medium mb-1">{siteConfig.websiteUrl}</p>
                   <p className="text-xs text-gray-400">Scan to explore all event details</p>
                 </div>
               </div>
               
               {/* Registration QR Code */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/40 to-yellow-500/40 rounded-2xl opacity-75 group-hover:opacity-100 blur transition-all duration-500"></div>
-                <div className="relative bg-white/5 backdrop-blur-md border border-academic-gold/30 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/40 to-pp-gold-light/40 rounded-2xl opacity-75 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                   <div className="w-48 h-48 mx-auto bg-white rounded-xl p-3 mb-4">
                     <img 
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(siteConfig.registrationUrl)}`}
@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                     />
                   </div>
                   <h4 className="font-bold text-white mb-2 text-lg">Register Now</h4>
-                  <p className="text-sm text-academic-gold font-medium mb-1">Google Form</p>
+                  <p className="text-sm text-pp-gold font-medium mb-1">Google Form</p>
                   <p className="text-xs text-gray-400">Scan to register for events instantly</p>
                 </div>
               </div>
@@ -220,12 +220,12 @@ const Contact: React.FC = () => {
       
       {/* Social Media */}
       <section className="relative py-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-academic-gold/5 to-yellow-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-gold/5 to-pp-gold-light/5"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">Follow Us</h3>
                 <p className="text-gray-300 mb-8">
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3 bg-white/5 hover:bg-academic-gold/20 border border-white/10 hover:border-academic-gold rounded-xl transition-all duration-300 capitalize font-semibold text-gray-300 hover:text-academic-gold hover:scale-105"
+                      className="px-6 py-3 bg-white/5 hover:bg-pp-gold/20 border border-white/10 hover:border-pp-gold rounded-xl transition-all duration-300 capitalize font-semibold text-gray-300 hover:text-pp-gold hover:scale-105"
                     >
                       {platform}
                     </a>

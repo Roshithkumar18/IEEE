@@ -12,15 +12,16 @@ export interface LeadershipMember {
   department?: string;
   level: number; // 1=Chairman/CEO, 2=COO, 3=Principal, 4=Branch Counsellor, 5=Faculty Coordinators, 6=Student Coordinators
   imagePlaceholder?: boolean;
+  photoPath?: string;
 }
 
 export const studentCoordinators: Coordinator[] = [
-  { name: 'Santhosh P', role: 'Student Coordinator', department: 'III ECE' },
-  { name: 'Shreehitha E', role: 'Student Coordinator', department: 'II ECE' },
-  { name: 'Vikas S', role: 'Student Coordinator', department: 'III ECE' },
-  { name: 'Suman', role: 'Student Coordinator', department: 'I ESE' },
-  { name: 'Parshad A', role: 'Student Coordinator', department: 'CSE' },
-  { name: 'Bhoomika', role: 'Student Coordinator', department: 'AIML' },
+  { name: 'Santhosh P', role: 'Student Coordinator' },
+  { name: 'Shreehitha E', role: 'Student Coordinator' },
+  { name: 'Vikas N', role: 'Student Coordinator' },
+  { name: 'Suman S', role: 'Student Coordinator' },
+  { name: 'Pradish A', role: 'Student Coordinator' },
+  { name: 'Bhoomika', role: 'Student Coordinator' },
 ];
 
 export const facultyCoordinators: Coordinator[] = [
@@ -34,21 +35,21 @@ export const leadership: LeadershipMember[] = [
     role: 'Chairman & CEO',
     title: 'Chairman & CEO, Sairam Institutions',
     level: 1,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/ceo.jpg',
   },
   {
-    name: 'Mr. Arun Kumar',
+    name: 'Dr. R Arun Kumar',
     role: 'COO',
     title: 'COO, Sairam Institutions',
     level: 2,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/coo.jpeg',
   },
   {
     name: 'Dr. B. Shadaksharappa',
     role: 'Principal',
     title: 'Principal, SSCE',
     level: 3,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Dr. B. Shadaksharappa-Photoroom (1).jpg',
   },
   {
     name: 'Dr. A. Poonguzhali',
@@ -56,21 +57,21 @@ export const leadership: LeadershipMember[] = [
     title: 'Branch Counsellor & HOD, ECE',
     department: 'ECE',
     level: 4,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Dr. Poonguzhali.jpg',
   },
   {
-    name: 'Dr. Narmatha. P',
+    name: 'Dr. Narmatha P',
     role: 'Coordinator',
     title: 'Faculty Coordinator',
     level: 5,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Narmadha.jpg',
   },
   {
     name: 'Dr. Ahila A',
     role: 'Coordinator',
     title: 'Faculty Coordinator',
     level: 5,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Ahila.jpg',
   },
 ];
 
@@ -79,41 +80,43 @@ export const eventStudentCoordinators: LeadershipMember[] = [
     name: 'Santhosh P',
     role: 'Student Coordinator',
     title: 'Student Coordinator',
-    department: 'III ECE',
     level: 6,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/SANTHOSH.P.JPG.jpeg',
   },
   {
-    name: 'Shreehitha E',
+    name: 'Shreehitha E [IV ECE]',
     role: 'Student Coordinator',
     title: 'Student Coordinator',
-    department: 'II ECE',
     level: 6,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/M.S.SREEHITHA.JPG.jpeg',
   },
   {
-    name: 'Vikas S',
+    name: 'Vikas N [III ECE]',
     role: 'Student Coordinator',
     title: 'Student Coordinator',
-    department: 'III ECE',
     level: 6,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Vikas N.JPG.jpeg',
   },
   {
-    name: 'Suman',
+    name: 'Suman S [III ISE]',
     role: 'Student Coordinator',
     title: 'Student Coordinator',
-    department: 'I ESE',
     level: 6,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Suman S.jpg.jpeg',
   },
   {
-    name: 'Parshad A',
+    name: 'Pradish A [III CSE]',
     role: 'Student Coordinator',
     title: 'Student Coordinator',
-    department: 'CSE',
     level: 6,
-    imagePlaceholder: true,
+    photoPath: '/assets/leadership/Pradish A.JPG.jpeg',
+  },
+  {
+    name: 'Bhoomika [III AIML]',
+    role: 'Student Coordinator',
+    title: 'Student Coordinator',
+    level: 6,
+    photoPath: '/assets/leadership/Bhoomika R.JPG.jpeg',
   },
 ];
 

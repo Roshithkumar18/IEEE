@@ -41,19 +41,19 @@ const Events: React.FC = () => {
   });
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27]">
+    <div className="min-h-screen bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background">
       {/* Page Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Animated Background */}
+        {/* Animated Background - unified blue */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               DISCOVER
             </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">
@@ -62,22 +62,22 @@ const Events: React.FC = () => {
             <p className="text-lg md:text-xl text-gray-400">
               Explore the technical and non-technical events of Pradyut Parva 3
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-academic-gold to-transparent mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-pp-gold to-transparent mx-auto mt-6"></div>
           </div>
         </div>
       </section>
       
       {/* Filters */}
-      <section className="sticky top-[112px] z-30 py-6 backdrop-blur-xl bg-[#0a0e27]/80 border-y border-white/10">
+      <section className="sticky top-[112px] z-30 py-6 backdrop-blur-xl bg-pp-background/80 border-y border-white/10">
         <div className="section-container">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-            {/* Category Filter */}
+          <div className="flex flex-col lg:flex-row lg:items-center lg:items-between gap-6">
+            {/* Category Filter - unified blue/gold buttons */}
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => handleCategoryChange('all')}
                 className={`px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
                   selectedCategory === 'all'
-                    ? 'bg-gradient-to-r from-academic-gold to-yellow-500 text-navy-900 shadow-lg shadow-academic-gold/50'
+                    ? 'bg-gradient-to-r from-pp-gold to-pp-gold-light text-pp-background-deep shadow-lg shadow-pp-gold/50'
                     : 'bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10'
                 }`}
               >
@@ -87,7 +87,7 @@ const Events: React.FC = () => {
                 onClick={() => handleCategoryChange('technical')}
                 className={`px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
                   selectedCategory === 'technical'
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/50'
+                    ? 'bg-gradient-to-r from-pp-primary to-pp-primary/80 text-white shadow-lg shadow-pp-primary/50'
                     : 'bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10'
                 }`}
               >
@@ -97,7 +97,7 @@ const Events: React.FC = () => {
                 onClick={() => handleCategoryChange('non-technical')}
                 className={`px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 ${
                   selectedCategory === 'non-technical'
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/50'
+                    ? 'bg-gradient-to-r from-pp-primary to-pp-primary/80 text-white shadow-lg shadow-pp-primary/50'
                     : 'bg-white/5 text-gray-300 border border-white/10 hover:bg-white/10'
                 }`}
               >
@@ -116,7 +116,7 @@ const Events: React.FC = () => {
                 placeholder="Search events..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold/50 focus:border-academic-gold/50 transition-all duration-300"
+                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold/50 focus:border-pp-gold/50 transition-all duration-300"
               />
             </div>
           </div>
@@ -125,10 +125,10 @@ const Events: React.FC = () => {
       
       {/* Events Grid */}
       <section className="py-16 relative">
-        {/* Background Elements */}
+        {/* Background Elements - unified blue */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-pp-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-pp-primary/5 rounded-full blur-3xl"></div>
         </div>
         
         <div className="section-container relative z-10">
@@ -138,7 +138,7 @@ const Events: React.FC = () => {
                 <div className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
                   <span className="text-sm text-gray-400">
                     Showing <span className="text-white font-bold">{filteredEvents.length}</span> {filteredEvents.length === 1 ? 'event' : 'events'}
-                    {searchQuery && <span className="text-academic-gold"> matching "{searchQuery}"</span>}
+                    {searchQuery && <span className="text-pp-gold"> matching "{searchQuery}"</span>}
                   </span>
                 </div>
               </div>
@@ -164,7 +164,7 @@ const Events: React.FC = () => {
                   setSearchQuery('');
                   handleCategoryChange('all');
                 }}
-                className="px-8 py-4 bg-gradient-to-r from-academic-gold to-yellow-500 text-navy-900 font-bold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-academic-gold/50"
+                className="px-8 py-4 bg-gradient-to-r from-pp-gold to-pp-gold-light text-pp-background-deep font-bold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-pp-gold/50"
               >
                 CLEAR FILTERS
               </button>

@@ -4,23 +4,23 @@ import { studentCoordinators, facultyCoordinators, leadership } from '../data/co
 
 const About: React.FC = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419] text-white py-16 md:py-20 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep text-white py-16 md:py-20 overflow-hidden">
+        {/* Animated Background - unified blue atmosphere */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-academic-gold/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-gold/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               ABOUT US
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
               About Pradyut Parva 3
             </h1>
-            <p className="text-lg text-academic-gold font-semibold">
+            <p className="text-lg text-pp-gold font-semibold">
               {siteConfig.theme}
             </p>
           </div>
@@ -36,7 +36,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8 text-center">About The Event</h2>
             
             <div className="relative group mb-8">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/20 to-academic-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
                   Pradyut Parva 3 is a celebration of technology, talent and togetherness, bringing students 
@@ -45,20 +45,20 @@ const About: React.FC = () => {
                   defines the IEEE student community.
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  With the theme <strong className="text-academic-gold">{siteConfig.theme}</strong>, 
+                  With the theme <strong className="text-pp-gold">{siteConfig.theme}</strong>, 
                   Pradyut Parva 3 aims to inspire students to ignite their passion for technology, 
                   innovate with creative solutions, and make a lasting impact on the engineering community.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-                  <span className="px-6 py-3 bg-academic-gold/10 border border-academic-gold/30 text-academic-gold rounded-full font-semibold hover:bg-academic-gold/20 transition-all duration-300">
+                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
                     Ideas Unite
                   </span>
-                  <span className="text-academic-gold text-2xl">•</span>
-                  <span className="px-6 py-3 bg-academic-gold/10 border border-academic-gold/30 text-academic-gold rounded-full font-semibold hover:bg-academic-gold/20 transition-all duration-300">
+                  <span className="text-pp-gold text-2xl">•</span>
+                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
                     Communities Thrive
                   </span>
-                  <span className="text-academic-gold text-2xl">•</span>
-                  <span className="px-6 py-3 bg-academic-gold/10 border border-academic-gold/30 text-academic-gold rounded-full font-semibold hover:bg-academic-gold/20 transition-all duration-300">
+                  <span className="text-pp-gold text-2xl">•</span>
+                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
                     Technology | People | Purpose
                   </span>
                 </div>
@@ -70,12 +70,12 @@ const About: React.FC = () => {
       
       {/* About Institution */}
       <section className="relative py-12 md:py-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-primary/5 to-pp-primary/10"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 text-center">
                 <img 
                   src={siteConfig.logos.college} 
@@ -105,7 +105,7 @@ const About: React.FC = () => {
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 text-center">
                 <img 
                   src={siteConfig.logos.ieee} 
@@ -131,7 +131,7 @@ const About: React.FC = () => {
       
       {/* Leadership */}
       <section className="relative py-12 md:py-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-academic-gold/5 to-yellow-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-gold/5 to-pp-gold-light/5"></div>
         
         <div className="section-container relative z-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white text-center mb-12">Leadership</h2>
@@ -139,10 +139,10 @@ const About: React.FC = () => {
           <div className="max-w-2xl mx-auto space-y-6">
             {leadership.map((person, index) => (
               <div key={index} className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                   <h3 className="text-xl font-bold text-white mb-1">{person.name}</h3>
-                  <p className="text-sm text-academic-gold font-semibold">{person.role}</p>
+                  <p className="text-sm text-pp-gold font-semibold">{person.role}</p>
                 </div>
               </div>
             ))}
@@ -159,11 +159,11 @@ const About: React.FC = () => {
           
           {/* Faculty Coordinators */}
           <div className="mb-12">
-            <h3 className="text-xl font-bold text-blue-400 text-center mb-6">Faculty Coordinators</h3>
+            <h3 className="text-xl font-bold text-pp-primary text-center mb-6">Faculty Coordinators</h3>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {facultyCoordinators.map((person, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                   <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                     <h4 className="text-lg font-bold text-white mb-1">{person.name}</h4>
                     <p className="text-sm text-gray-400">{person.role}</p>
@@ -175,14 +175,14 @@ const About: React.FC = () => {
           
           {/* Student Coordinators */}
           <div>
-            <h3 className="text-xl font-bold text-purple-400 text-center mb-6">Student Coordinators</h3>
+            <h3 className="text-xl font-bold text-pp-gold text-center mb-6">Student Coordinators</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {studentCoordinators.map((person, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold-light/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                   <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                     <h4 className="text-lg font-bold text-white mb-1">{person.name}</h4>
-                    <p className="text-sm text-academic-gold font-semibold">{person.department}</p>
+                    <p className="text-sm text-pp-gold font-semibold">{person.department}</p>
                   </div>
                 </div>
               ))}

@@ -1,7 +1,10 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import GlobalParticles from './components/GlobalParticles';
+import { ScrollProgress } from './components/ScrollProgress';
+import { ScrollToTop } from './components/ScrollToTop';
+import { PremiumCursor } from './components/PremiumCursor';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import EventDetail from './pages/EventDetail';
@@ -10,9 +13,13 @@ import Schedule from './pages/Schedule';
 import Guidelines from './pages/Guidelines';
 import Contact from './pages/Contact';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
+      <ScrollToTop />
+      <GlobalParticles />
+      <ScrollProgress />
+      <PremiumCursor />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-1">

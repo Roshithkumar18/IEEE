@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
   };
   
   return (
-    <footer className="relative bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#05070f] text-white overflow-hidden">
-      {/* Background Elements */}
+    <footer className="relative bg-gradient-to-b from-pp-background via-pp-background-deep to-[#05070f] text-white overflow-hidden">
+      {/* Background Elements - unified blue atmosphere */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pp-primary/5 rounded-full blur-3xl"></div>
       
       {/* Main Footer */}
       <div className="section-container py-12 md:py-16 relative z-10">
@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
           {/* About */}
           <div className="lg:col-span-2">
             <div className="mb-4">
-              <h3 className="text-2xl font-display font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-academic-gold">
+              <h3 className="text-2xl font-display font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-pp-gold">
                 {siteConfig.eventName}
               </h3>
-              <p className="text-academic-gold font-semibold">{siteConfig.theme}</p>
+              <p className="text-pp-gold font-semibold">{siteConfig.theme}</p>
             </div>
             <p className="text-gray-300 mb-4 max-w-md leading-relaxed">
               {siteConfig.tagline}
@@ -54,14 +54,14 @@ const Footer: React.FC = () => {
             <div className="space-y-2 text-sm text-gray-300">
               <p className="font-semibold text-white">{siteConfig.institution}</p>
               <p className="text-gray-400">{siteConfig.location}</p>
-              <p className="font-semibold text-academic-gold">{siteConfig.organizer}</p>
+              <p className="font-semibold text-pp-gold">{siteConfig.organizer}</p>
             </div>
           </div>
           
           {/* Links Sections */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-sm font-bold uppercase mb-4 text-academic-gold">{title}</h4>
+              <h4 className="text-sm font-bold uppercase mb-4 text-pp-gold">{title}</h4>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h4 className="text-sm font-bold uppercase mb-3 text-academic-gold">Connect With Us</h4>
+              <h4 className="text-sm font-bold uppercase mb-3 text-pp-gold">Connect With Us</h4>
               <div className="flex space-x-4">
                 {Object.entries(siteConfig.social).map(([platform, url]) => (
                   <a
@@ -101,10 +101,10 @@ const Footer: React.FC = () => {
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/5 hover:bg-academic-gold/20 border border-white/10 hover:border-academic-gold rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-white/5 hover:bg-pp-gold/20 border border-white/10 hover:border-pp-gold rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                     aria-label={platform}
                   >
-                    <span className="text-xs uppercase font-bold text-gray-400 hover:text-academic-gold">{platform.slice(0, 2)}</span>
+                    <span className="text-xs uppercase font-bold text-gray-400 hover:text-pp-gold">{platform.slice(0, 2)}</span>
                   </a>
                 ))}
               </div>

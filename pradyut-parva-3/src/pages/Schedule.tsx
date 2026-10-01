@@ -23,25 +23,25 @@ const Schedule: React.FC = () => {
   
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'Technical': return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
-      case 'Non-Technical': return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
-      case 'Special': return 'bg-academic-gold/20 text-academic-gold border-academic-gold/30';
+      case 'Technical': return 'bg-pp-primary/20 text-pp-primary border-pp-border';
+      case 'Non-Technical': return 'bg-pp-primary/20 text-pp-primary border-pp-border';
+      case 'Special': return 'bg-pp-gold/20 text-pp-gold border-pp-gold/30';
       default: return 'bg-white/10 text-gray-300 border-white/20';
     }
   };
   
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419] text-white py-16 md:py-20 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep text-white py-16 md:py-20 overflow-hidden">
+        {/* Animated Background - unified blue atmosphere */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/15 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               SCHEDULE
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -56,14 +56,14 @@ const Schedule: React.FC = () => {
       
       {/* Note */}
       <section className="relative py-8 border-b border-white/10">
-        <div className="absolute inset-0 bg-gradient-to-r from-academic-gold/5 via-academic-gold/10 to-academic-gold/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pp-gold/5 via-pp-gold/10 to-pp-gold/5"></div>
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
-              <div className="relative bg-gradient-to-br from-academic-gold/10 to-yellow-500/5 backdrop-blur-md border border-academic-gold/30 rounded-2xl p-6 text-center">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-pp-gold/10 to-pp-gold-light/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6 text-center">
                 <p className="text-sm md:text-base text-gray-300">
-                  <strong className="text-academic-gold">Note:</strong> Detailed event timings will be announced soon. 
+                  <strong className="text-pp-gold">Note:</strong> Detailed event timings will be announced soon. 
                   Please check back regularly for updates.
                 </p>
               </div>
@@ -83,10 +83,10 @@ const Schedule: React.FC = () => {
                 {/* Day Header */}
                 <div className="mb-8">
                   <div className="inline-block relative group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-academic-gold to-yellow-500 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
-                    <div className="relative px-6 py-3 bg-gradient-to-r from-[#1a1f3a] to-[#0f1419] border border-academic-gold/30 rounded-2xl">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-pp-gold to-pp-gold-light rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+                    <div className="relative px-6 py-3 bg-gradient-to-r from-pp-background-light to-pp-background-deep border border-pp-gold/30 rounded-2xl">
                       <h2 className="text-2xl font-display font-bold text-white">
-                        Day {dayIndex + 1} • <span className="text-academic-gold">{day.date}</span>
+                        Day {dayIndex + 1} • <span className="text-pp-gold">{day.date}</span>
                       </h2>
                     </div>
                   </div>
@@ -94,8 +94,8 @@ const Schedule: React.FC = () => {
                 
                 {/* Timeline */}
                 <div className="relative">
-                  {/* Vertical Line */}
-                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-academic-gold via-blue-500 to-purple-500 opacity-30"></div>
+                  {/* Vertical Line - unified gradient */}
+                  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pp-gold via-pp-primary to-pp-primary opacity-30"></div>
                   
                   {/* Events */}
                   <div className="space-y-6">
@@ -103,12 +103,12 @@ const Schedule: React.FC = () => {
                       <div key={eventIndex} className="relative flex items-start space-x-6">
                         {/* Dot */}
                         <div className="flex-shrink-0 w-16 flex justify-center">
-                          <div className="w-4 h-4 bg-academic-gold rounded-full border-4 border-[#0f1419] shadow-lg shadow-academic-gold/50 relative z-10 animate-pulse"></div>
+                          <div className="w-4 h-4 bg-pp-gold rounded-full border-4 border-pp-background-deep shadow-lg shadow-pp-gold/50 relative z-10 animate-pulse"></div>
                         </div>
                         
                         {/* Event Card */}
                         <div className="flex-1 relative group">
-                          <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                           <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                               <div className="flex-1">
@@ -124,7 +124,7 @@ const Schedule: React.FC = () => {
                                   {event.title}
                                 </h3>
                                 <p className="text-sm text-gray-400">
-                                  <span className="text-academic-gold">Venue:</span> {event.venue}
+                                  <span className="text-pp-gold">Venue:</span> {event.venue}
                                 </p>
                               </div>
                             </div>
@@ -142,12 +142,12 @@ const Schedule: React.FC = () => {
       
       {/* Legend */}
       <section className="relative py-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-primary/5 to-pp-primary/10"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8">
                 <h3 className="text-lg font-bold text-white mb-6 text-center">Event Categories</h3>
                 <div className="flex flex-wrap justify-center gap-6">

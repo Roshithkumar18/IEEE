@@ -14,16 +14,12 @@ const EventDetail: React.FC = () => {
   const Icon = getIconByName(event.icon);
   
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 text-white overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419]"></div>
-        <div className={`absolute inset-0 ${
-          event.category === 'Technical'
-            ? 'bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
-            : 'bg-gradient-to-br from-purple-500/10 to-pink-500/10'
-        }`}></div>
+        {/* Animated Background - unified blue atmosphere */}
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pp-primary/5 to-pp-primary/10"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         {/* Floating Particles */}
@@ -46,9 +42,9 @@ const EventDetail: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-6 flex items-center space-x-2 text-sm">
-              <Link to="/" className="text-gray-400 hover:text-academic-gold transition-colors">Home</Link>
+              <Link to="/" className="text-gray-400 hover:text-pp-gold transition-colors">Home</Link>
               <span className="text-gray-600">/</span>
-              <Link to="/events" className="text-gray-400 hover:text-academic-gold transition-colors">Events</Link>
+              <Link to="/events" className="text-gray-400 hover:text-pp-gold transition-colors">Events</Link>
               <span className="text-gray-600">/</span>
               <span className="text-gray-300">{event.title}</span>
             </div>
@@ -65,13 +61,9 @@ const EventDetail: React.FC = () => {
               )}
             </div>
             
-            {/* Category */}
+            {/* Category - unified blue badge */}
             <div className="mb-4">
-              <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                event.category === 'Technical'
-                  ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-                  : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-              }`}>
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-pp-primary/20 text-pp-primary border border-pp-border">
                 {event.category.toUpperCase()}
               </span>
             </div>
@@ -82,11 +74,11 @@ const EventDetail: React.FC = () => {
                 <Icon size={48} />
               </div>
               <div className="flex-1">
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-academic-gold">
+                <h1 className="text-4xl md:text-5xl font-display font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-pp-gold">
                   {event.title}
                 </h1>
                 <p className="text-xl text-gray-200 mb-3">{event.subtitle}</p>
-                <p className="text-lg text-academic-gold font-semibold italic">
+                <p className="text-lg text-pp-gold font-semibold italic">
                   {event.tagline}
                 </p>
               </div>
@@ -95,11 +87,11 @@ const EventDetail: React.FC = () => {
             {/* Event Info */}
             <div className="flex flex-wrap gap-6 text-sm">
               <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                <CalendarIcon size={18} className="text-academic-gold" />
+                <CalendarIcon size={18} className="text-pp-gold" />
                 <span>{event.details?.date || 'TBA'}</span>
               </div>
               <div className="flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                <MapPinIcon size={18} className="text-academic-gold" />
+                <MapPinIcon size={18} className="text-pp-gold" />
                 <span>{event.details?.venue || 'TBA'}</span>
               </div>
             </div>
@@ -120,7 +112,7 @@ const EventDetail: React.FC = () => {
                 About This Event
               </h2>
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/20 to-academic-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
                   <p className="text-lg text-gray-300 leading-relaxed">
                     {event.description}
@@ -133,36 +125,36 @@ const EventDetail: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               {/* Format */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-academic-gold mb-3">Event Format</h3>
+                  <h3 className="text-lg font-bold text-pp-gold mb-3">Event Format</h3>
                   <p className="text-gray-300">{event.details?.format || 'Details will be announced soon.'}</p>
                 </div>
               </div>
               
               {/* Eligibility */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-academic-gold mb-3">Eligibility</h3>
+                  <h3 className="text-lg font-bold text-pp-gold mb-3">Eligibility</h3>
                   <p className="text-gray-300">{event.details?.eligibility || 'Details will be announced soon.'}</p>
                 </div>
               </div>
               
               {/* Team Size */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-academic-gold mb-3">Team Size</h3>
+                  <h3 className="text-lg font-bold text-pp-gold mb-3">Team Size</h3>
                   <p className="text-gray-300">{event.details?.teamSize || 'Details will be announced soon.'}</p>
                 </div>
               </div>
               
               {/* Prizes */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
-                <div className="relative bg-gradient-to-br from-academic-gold/10 to-yellow-500/5 backdrop-blur-md border border-academic-gold/30 rounded-2xl p-6 hover:bg-academic-gold/20 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-academic-gold mb-3">Prizes</h3>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="relative bg-gradient-to-br from-pp-gold/10 to-pp-gold-light/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6 hover:bg-pp-gold/20 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-pp-gold mb-3">Prizes</h3>
                   <p className="text-white font-semibold">{event.details?.prizes || 'Details will be announced soon.'}</p>
                 </div>
               </div>
@@ -175,12 +167,12 @@ const EventDetail: React.FC = () => {
                   Rules & Regulations
                 </h2>
                 <div className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/20 to-academic-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                   <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
                     <ul className="space-y-3">
                       {event.details.rules.map((rule, index) => (
                         <li key={index} className="flex items-start space-x-3">
-                          <span className="flex-shrink-0 w-6 h-6 bg-academic-gold/20 text-academic-gold border border-academic-gold/30 rounded-full flex items-center justify-center text-sm font-bold mt-0.5">
+                          <span className="flex-shrink-0 w-6 h-6 bg-pp-gold/20 text-pp-gold border border-pp-gold/30 rounded-full flex items-center justify-center text-sm font-bold mt-0.5">
                             {index + 1}
                           </span>
                           <span className="text-gray-300">{rule}</span>
@@ -199,12 +191,12 @@ const EventDetail: React.FC = () => {
                   Event Coordinators
                 </h2>
                 <div className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/20 to-academic-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                   <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
                     {event.details.facultyCoordinator && (
                       <div className="mb-6 pb-6 border-b border-white/10">
-                        <h3 className="text-sm font-bold text-academic-gold mb-3 uppercase tracking-wider">Faculty Coordinator</h3>
-                        <div className="px-4 py-3 bg-academic-gold/10 border border-academic-gold/30 text-white rounded-xl font-medium">
+                        <h3 className="text-sm font-bold text-pp-gold mb-3 uppercase tracking-wider">Faculty Coordinator</h3>
+                        <div className="px-4 py-3 bg-pp-gold/10 border border-pp-gold/30 text-white rounded-xl font-medium">
                           {event.details.facultyCoordinator}
                         </div>
                       </div>
@@ -212,14 +204,14 @@ const EventDetail: React.FC = () => {
                     
                     {event.details.eventLeader && (
                       <div className={`${event.details.studentCoordinators && event.details.studentCoordinators.length > 0 ? 'mb-6 pb-6 border-b border-white/10' : ''}`}>
-                        <h3 className="text-sm font-bold text-academic-gold mb-3 uppercase tracking-wider">Event Leader</h3>
-                        <div className="px-4 py-3 bg-academic-gold/10 border border-academic-gold/30 rounded-xl">
+                        <h3 className="text-sm font-bold text-pp-gold mb-3 uppercase tracking-wider">Event Leader</h3>
+                        <div className="px-4 py-3 bg-pp-gold/10 border border-pp-gold/30 rounded-xl">
                           <div className="flex items-center justify-between">
                             <span className="text-white font-medium">{event.details.eventLeader.name}</span>
                             {event.details.eventLeader.phone && (
                               <a 
                                 href={`tel:${event.details.eventLeader.phone}`}
-                                className="text-academic-gold hover:text-yellow-500 font-semibold text-sm transition-colors"
+                                className="text-pp-gold hover:text-pp-gold-light font-semibold text-sm transition-colors"
                               >
                                 {event.details.eventLeader.phone}
                               </a>
@@ -236,15 +228,15 @@ const EventDetail: React.FC = () => {
                           {event.details.studentCoordinators.map((coordinator, index) => (
                             <div 
                               key={index} 
-                              className={`px-4 py-3 ${coordinator.isLeader ? 'bg-academic-gold/20 border-2 border-academic-gold/50' : 'bg-white/5 border border-white/10'} rounded-xl transition-all duration-300 hover:bg-white/10`}
+                              className={`px-4 py-3 ${coordinator.isLeader ? 'bg-pp-gold/20 border-2 border-pp-gold/50' : 'bg-white/5 border border-white/10'} rounded-xl transition-all duration-300 hover:bg-white/10`}
                             >
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <span className={`${coordinator.isLeader ? 'text-academic-gold font-bold' : 'text-gray-300'} font-medium`}>
+                                  <span className={`${coordinator.isLeader ? 'text-pp-gold font-bold' : 'text-gray-300'} font-medium`}>
                                     {coordinator.name}
                                   </span>
                                   {coordinator.isLeader && (
-                                    <span className="ml-2 text-xs bg-academic-gold/30 text-academic-gold px-2 py-0.5 rounded-full font-bold">
+                                    <span className="ml-2 text-xs bg-pp-gold/30 text-pp-gold px-2 py-0.5 rounded-full font-bold">
                                       LEADER
                                     </span>
                                   )}
@@ -252,7 +244,7 @@ const EventDetail: React.FC = () => {
                                 {coordinator.phone && (
                                   <a 
                                     href={`tel:${coordinator.phone}`}
-                                    className="text-academic-gold hover:text-yellow-500 font-semibold text-sm transition-colors"
+                                    className="text-pp-gold hover:text-pp-gold-light font-semibold text-sm transition-colors"
                                   >
                                     {coordinator.phone}
                                   </a>
@@ -275,11 +267,11 @@ const EventDetail: React.FC = () => {
                   Event Coordinators
                 </h2>
                 <div className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/20 to-academic-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                   <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
                     <div className="flex flex-wrap gap-3">
                       {event.details.coordinators.map((coordinator, index) => (
-                        <span key={index} className="px-4 py-2 bg-academic-gold/10 border border-academic-gold/30 text-academic-gold rounded-full text-sm font-medium hover:bg-academic-gold/20 transition-all duration-300">
+                        <span key={index} className="px-4 py-2 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full text-sm font-medium hover:bg-pp-gold/20 transition-all duration-300">
                           {coordinator}
                         </span>
                       ))}

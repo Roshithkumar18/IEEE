@@ -85,7 +85,7 @@ export const technicalEvents: Event[] = [
     description: 'Web development competition. Build innovative websites with theme announced one week before the event.',
     icon: 'globe',
     details: {
-      date: '8th October 2026, 10:15 AM',
+      date: '7th October 2026',
       venue: 'ISE Lab',
       format: 'GitHub submission with live demo',
       eligibility: 'Open to all engineering students',
@@ -125,7 +125,7 @@ export const technicalEvents: Event[] = [
     description: 'Antenna design challenge focused on designing, simulating and developing communication-oriented solutions.',
     icon: 'antenna',
     details: {
-      date: '7th & 8th October 2026',
+      date: '8th October 2026',
       venue: 'ECE IOT Lab',
       format: 'Design and simulation challenge',
       eligibility: 'Open to ECE and related branches',
@@ -191,7 +191,7 @@ export const technicalEvents: Event[] = [
     description: 'Autonomous robot racing competition. Navigate through challenging tracks with curves and obstacles.',
     icon: 'robot',
     details: {
-      date: '7th October 2026, 3:00 PM',
+      date: '8th October 2026',
       venue: 'E Yantra Lab',
       format: 'Autonomous robot racing',
       eligibility: 'Open to all engineering students',
@@ -230,7 +230,7 @@ export const technicalEvents: Event[] = [
     description: 'Circuit debugging challenge with three rounds: MCQ, circuit creation, and circuit debugging.',
     icon: 'chip',
     details: {
-      date: '8th October 2026, 11:15 AM',
+      date: '8th October 2026',
       venue: 'SSCE, Anekal, Bangalore',
       room: '306',
       format: 'Three rounds: MCQ, Circuit Creation, Circuit Debugging',
@@ -246,7 +246,7 @@ export const technicalEvents: Event[] = [
         name: 'Nandhini',
       },
       studentCoordinators: [
-        { name: 'Bhoomika M', phone: '8660099369' },
+        { name: 'Bhoomika [III AIML]', phone: '8660099369' },
         { name: 'Vaishali B', phone: '9739371609' },
         { name: 'Pallavi S', phone: '9901381770' },
       ],
@@ -272,7 +272,7 @@ export const technicalEvents: Event[] = [
     icon: 'lightbulb',
     externalLink: 'https://terraquest-20.vercel.app/',
     details: {
-      date: '7th October 2026, 12:30 PM (24 hours)',
+      date: '7th & 8th October 2026 (24 hours)',
       venue: 'Seminar Hall',
       format: '24-hour continuous hackathon',
       eligibility: 'Open to all students',
@@ -345,7 +345,7 @@ export const technicalEvents: Event[] = [
     description: 'Technical debate competition where teams argue for and against technology-related motions.',
     icon: 'presentation',
     details: {
-      date: '8th October 2026, 10:45 AM',
+      date: '7th October 2026',
       venue: 'SSCE, Anekal, Bangalore',
       room: '203',
       format: 'Team debate with opening and rebuttal rounds',
@@ -385,7 +385,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Prompt engineering challenge focused on crafting effective AI prompts to generate creative outputs.',
     icon: 'brain',
     details: {
-      date: '7th & 8th October 2026',
+      date: '7th October 2026',
       venue: 'AV HALL',
       format: 'AI image generation challenge',
       eligibility: 'Open to all students',
@@ -419,7 +419,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Exciting treasure hunt combining clues, puzzles, and challenges. First team to reach the treasure wins.',
     icon: 'search',
     details: {
-      date: '7th October 2026, 2:00 PM',
+      date: '8th October 2026',
       venue: 'SSCE Campus',
       format: 'Two rounds with clues and puzzles',
       eligibility: 'Open to all students',
@@ -457,7 +457,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Mobile gaming tournaments featuring Free Fire and BGMI. Battle royale squad competitions with exciting prizes.',
     icon: 'gamepad',
     details: {
-      date: '7th October 2026, 12:00 PM',
+      date: '7th October 2026',
       venue: 'Room 307',
       format: 'Squad-based battle royale',
       eligibility: 'Open to all students',
@@ -501,7 +501,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Challenge yourself to identify whether content is AI-generated or human-created. Test your ability to distinguish between artificial intelligence and human creativity across text, images, and videos.',
     icon: 'brain',
     details: {
-      date: '8th October 2026, 10:45 AM',
+      date: '7th October 2026',
       venue: 'SSCE, Anekal, Bangalore',
       room: '208',
       format: 'Content identification challenge',
@@ -536,7 +536,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'A connection-based quiz where teams identify links between technical concepts, programming, technology, famous tech personalities, and innovations. Multiple rounds featuring clues, visual/audio connections, and rapid-fire questions.',
     icon: 'network',
     details: {
-      date: '7th & 8th October 2026',
+      date: '7th October 2026',
       venue: 'SSCE, Anekal, Bangalore',
       room: '214',
       format: 'Multiple rounds with different connection challenges',
@@ -583,7 +583,7 @@ export const nonTechnicalEvents: Event[] = [
     description: 'Photography competition during the event. Capture memorable moments with creativity and storytelling.',
     icon: 'camera',
     details: {
-      date: '7th & 8th October 2026 (October 14 & 15)',
+      date: '8th October 2026',
       venue: 'SSCE Campus',
       format: 'Individual photography',
       eligibility: 'Open to all students',

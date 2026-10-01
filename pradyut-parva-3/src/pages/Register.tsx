@@ -37,17 +37,17 @@ const Register: React.FC = () => {
   };
   
   return (
-    <div className="bg-gradient-to-b from-[#0a0e27] via-[#0f1419] to-[#0a0e27] min-h-screen">
+    <div className="bg-gradient-to-b from-pp-background via-pp-background-deep to-pp-background min-h-screen">
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-[#0a0e27] via-[#1a1f3a] to-[#0f1419] text-white py-16 md:py-20 overflow-hidden">
-        {/* Animated Background */}
+      <section className="relative bg-gradient-to-br from-pp-background via-pp-background-light to-pp-background-deep text-white py-16 md:py-20 overflow-hidden">
+        {/* Animated Background - unified blue/gold atmosphere */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-academic-gold/10 rounded-full blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-pp-gold/10 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-pp-primary/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-academic-gold mb-6">
+            <div className="inline-block px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-bold text-pp-gold mb-6">
               JOIN US
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -69,10 +69,10 @@ const Register: React.FC = () => {
           <div className="max-w-3xl mx-auto">
             {/* Important Note */}
             <div className="relative group mb-8">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-academic-gold/30 to-yellow-500/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
-              <div className="relative bg-gradient-to-br from-academic-gold/10 to-yellow-500/5 backdrop-blur-md border border-academic-gold/30 rounded-2xl p-6">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/30 to-pp-gold-light/30 rounded-2xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-pp-gold/10 to-pp-gold-light/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6">
                 <p className="text-sm text-gray-300">
-                  <strong className="text-academic-gold">Important:</strong> Please verify your details before submitting your registration. 
+                  <strong className="text-pp-gold">Important:</strong> Please verify your details before submitting your registration. 
                   All fields marked with an asterisk (*) are required.
                 </p>
               </div>
@@ -81,7 +81,7 @@ const Register: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Personal Information */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                   <h2 className="text-xl font-bold text-white mb-6">Personal Information</h2>
                 
@@ -96,7 +96,7 @@ const Register: React.FC = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -112,7 +112,7 @@ const Register: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                         placeholder="your.email@example.com"
                       />
                     </div>
@@ -127,7 +127,7 @@ const Register: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -138,7 +138,7 @@ const Register: React.FC = () => {
               
               {/* Academic Information */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                   <h2 className="text-xl font-bold text-white mb-6">Academic Information</h2>
                 
@@ -153,7 +153,7 @@ const Register: React.FC = () => {
                       value={formData.college}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                       placeholder="Enter your college name"
                     />
                   </div>
@@ -169,7 +169,7 @@ const Register: React.FC = () => {
                         value={formData.department}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                         placeholder="e.g., Computer Science"
                       />
                     </div>
@@ -183,13 +183,13 @@ const Register: React.FC = () => {
                         value={formData.year}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                       >
-                        <option value="" className="bg-[#0f1419] text-gray-400">Select Year</option>
-                        <option value="1" className="bg-[#0f1419]">First Year</option>
-                        <option value="2" className="bg-[#0f1419]">Second Year</option>
-                        <option value="3" className="bg-[#0f1419]">Third Year</option>
-                        <option value="4" className="bg-[#0f1419]">Fourth Year</option>
+                        <option value="" className="bg-pp-background-deep text-gray-400">Select Year</option>
+                        <option value="1" className="bg-pp-background-deep">First Year</option>
+                        <option value="2" className="bg-pp-background-deep">Second Year</option>
+                        <option value="3" className="bg-pp-background-deep">Third Year</option>
+                        <option value="4" className="bg-pp-background-deep">Fourth Year</option>
                       </select>
                     </div>
                   </div>
@@ -204,7 +204,7 @@ const Register: React.FC = () => {
                       value={formData.city}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                       placeholder="Enter your city"
                     />
                   </div>
@@ -214,7 +214,7 @@ const Register: React.FC = () => {
               
               {/* Event Selection */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                   <h2 className="text-xl font-bold text-white mb-6">Select Events *</h2>
                 <p className="text-sm text-gray-400 mb-4">
@@ -224,7 +224,7 @@ const Register: React.FC = () => {
                 <div className="space-y-6">
                   {/* Technical Events */}
                   <div>
-                    <h3 className="text-sm font-bold text-blue-400 mb-3 uppercase tracking-wider">Technical Events</h3>
+                    <h3 className="text-sm font-bold text-pp-primary mb-3 uppercase tracking-wider">Technical Events</h3>
                     <div className="space-y-2">
                       {allEvents.filter(e => e.category === 'Technical').map(event => (
                         <label key={event.id} className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 border border-white/5 hover:border-white/10 cursor-pointer transition-all duration-300">
@@ -232,7 +232,7 @@ const Register: React.FC = () => {
                             type="checkbox"
                             checked={formData.events.includes(event.id)}
                             onChange={() => handleEventChange(event.id)}
-                            className="mt-1 w-4 h-4 text-academic-gold rounded focus:ring-2 focus:ring-academic-gold bg-white/5 border-white/20"
+                            className="mt-1 w-4 h-4 text-pp-gold rounded focus:ring-2 focus:ring-pp-gold bg-white/5 border-white/20"
                           />
                           <div className="flex-1">
                             <div className="font-semibold text-white">{event.title}</div>
@@ -245,7 +245,7 @@ const Register: React.FC = () => {
                   
                   {/* Non-Technical Events */}
                   <div>
-                    <h3 className="text-sm font-bold text-purple-400 mb-3 uppercase tracking-wider">Non-Technical Events</h3>
+                    <h3 className="text-sm font-bold text-pp-gold mb-3 uppercase tracking-wider">Non-Technical Events</h3>
                     <div className="space-y-2">
                       {allEvents.filter(e => e.category === 'Non-Technical').map(event => (
                         <label key={event.id} className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 border border-white/5 hover:border-white/10 cursor-pointer transition-all duration-300">
@@ -253,7 +253,7 @@ const Register: React.FC = () => {
                             type="checkbox"
                             checked={formData.events.includes(event.id)}
                             onChange={() => handleEventChange(event.id)}
-                            className="mt-1 w-4 h-4 text-academic-gold rounded focus:ring-2 focus:ring-academic-gold bg-white/5 border-white/20"
+                            className="mt-1 w-4 h-4 text-pp-gold rounded focus:ring-2 focus:ring-pp-gold bg-white/5 border-white/20"
                           />
                           <div className="flex-1">
                             <div className="font-semibold text-white">
@@ -274,7 +274,7 @@ const Register: React.FC = () => {
               
               {/* Team Information */}
               <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-primary/20 to-pp-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                   <h2 className="text-xl font-bold text-white mb-6">Team Information</h2>
                 <p className="text-sm text-gray-400 mb-4">
@@ -291,7 +291,7 @@ const Register: React.FC = () => {
                       name="teamName"
                       value={formData.teamName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300"
+                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300"
                       placeholder="Enter your team name"
                     />
                   </div>
@@ -305,7 +305,7 @@ const Register: React.FC = () => {
                       value={formData.teamMembers}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-academic-gold focus:border-transparent transition-all duration-300 resize-none"
+                      className="w-full px-4 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-pp-gold focus:border-transparent transition-all duration-300 resize-none"
                       placeholder="Enter team member names (one per line)"
                     />
                   </div>
@@ -317,7 +317,7 @@ const Register: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   type="submit"
-                  className="group flex-1 px-10 py-4 bg-gradient-to-r from-academic-gold to-yellow-500 text-navy-900 font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-academic-gold/50"
+                  className="group flex-1 px-10 py-4 bg-gradient-to-r from-pp-gold to-pp-gold-light text-pp-background-deep font-bold text-lg rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-pp-gold/50"
                 >
                   <span className="flex items-center justify-center gap-2">
                     REGISTER NOW
