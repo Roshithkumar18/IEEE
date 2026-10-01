@@ -1,0 +1,4 @@
+@echo off
+echo Deploying to Vercel Production...
+vercel --prod
+pause
