@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Thin scroll progress indicator
  * Shows at the top of the viewport with electric blue to cyan gradient
  */
-export const ScrollProgress: React.FC = () => {
+export const ScrollProgress = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {

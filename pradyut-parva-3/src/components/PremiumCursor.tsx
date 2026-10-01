@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Premium cursor effect - Desktop only
  * Subtle cyan glow that follows the cursor
  * Magnetic attraction on interactive elements (optional)
  */
-export const PremiumCursor: React.FC = () => {
+export const PremiumCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
