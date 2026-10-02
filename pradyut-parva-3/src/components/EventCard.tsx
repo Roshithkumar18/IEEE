@@ -17,12 +17,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
   return (
     <div 
       ref={ref}
-      className={`group relative transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-      style={{ 
-        transitionDelay: `${index * 80}ms`,
-      }}
+      className="group relative opacity-100"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

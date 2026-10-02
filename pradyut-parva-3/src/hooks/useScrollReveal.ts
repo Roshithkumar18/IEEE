@@ -18,7 +18,7 @@ export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
   } = options;
 
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Changed to true for instant visibility
 
   useEffect(() => {
     const element = ref.current;
@@ -31,27 +31,10 @@ export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
       return;
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (triggerOnce && element) {
-            observer.unobserve(element);
-          }
-        } else if (!triggerOnce) {
-          setIsVisible(false);
-        }
-      },
-      { threshold, rootMargin }
-    );
+    // Instant visibility - no observer needed for first paint
+    // This ensures content appears immediately
+    setIsVisible(true);
 
-    observer.observe(element);
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
   }, [threshold, rootMargin, triggerOnce]);
 
   return { ref, isVisible };

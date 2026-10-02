@@ -35,8 +35,7 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   return (
     <div
       ref={ref}
-      className={`${className} ${isVisible ? animationClass : 'opacity-0'}`}
-      style={{ animationDelay: `${delay}ms` }}
+      className={`${className}`}
     >
       {children}
     </div>
@@ -66,11 +65,7 @@ export const StaggeredList: React.FC<StaggeredListProps> = ({
   return (
     <div ref={ref} className={className}>
       {React.Children.map(children, (child, index) => (
-        <div
-          key={index}
-          className={`${itemClassName} ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}
-          style={{ animationDelay: `${index * staggerDelay}ms` }}
-        >
+        <div key={index} className={itemClassName}>
           {child}
         </div>
       ))}

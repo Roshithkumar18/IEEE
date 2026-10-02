@@ -246,6 +246,7 @@ const Home: React.FC = () => {
                           <img 
                             src={leader.photoPath} 
                             alt={leader.name}
+                            loading="lazy"
                             className="w-32 h-32 md:w-40 md:h-40 object-cover object-top rounded-2xl border-4 border-pp-gold/30 shadow-xl"
                             style={{ objectPosition: '50% 20%' }}
                           />
@@ -295,6 +296,7 @@ const Home: React.FC = () => {
                           <img 
                             src={leader.photoPath} 
                             alt={leader.name}
+                            loading="lazy"
                             className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-xl border-2 border-pp-primary/30 shadow-lg"
                             style={{ objectPosition: '50% 20%' }}
                           />
@@ -344,6 +346,7 @@ const Home: React.FC = () => {
                           <img 
                             src={leader.photoPath} 
                             alt={leader.name}
+                            loading="lazy"
                             className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-xl border-2 border-pp-primary/30 shadow-lg"
                             style={{ objectPosition: '50% 20%' }}
                           />
@@ -393,6 +396,7 @@ const Home: React.FC = () => {
                           <img 
                             src={leader.photoPath} 
                             alt={leader.name}
+                            loading="lazy"
                             className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-xl border-2 border-pp-primary/30 shadow-lg"
                             style={{ objectPosition: '50% 20%' }}
                           />
@@ -448,6 +452,7 @@ const Home: React.FC = () => {
                               <img 
                                 src={leader.photoPath} 
                                 alt={leader.name}
+                                loading="lazy"
                                 className="w-16 h-16 object-cover rounded-lg border border-pp-primary/30 shadow-md"
                                 style={{ objectPosition: '50% 20%' }}
                               />

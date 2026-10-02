@@ -10,7 +10,38 @@
     <meta property="og:title" content="Pradyut Parva 3 | IEEE Student Branch & Societies | Sri Sairam College of Engineering" />
     <meta property="og:description" content="Join us for Pradyut Parva 3 - A Celebration of Technology, Talent and Togetherness. IGNITE | INNOVATE | IMPACT" />
     <meta property="og:type" content="website" />
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    
+    <!-- Preload critical assets -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    
     <title>Pradyut Parva 3 | IEEE Student Branch & Societies | Sri Sairam College of Engineering</title>
+    
+    <!-- Inline critical CSS for instant rendering -->
+    <style>
+      body {
+        margin: 0;
+        background-color: #0b1126;
+        color: #f5f7fb;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Prevent flash of unstyled content */
+      .loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #0b1126;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

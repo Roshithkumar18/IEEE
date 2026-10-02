@@ -88,8 +88,8 @@ const GlobalParticles = () => {
       }
     }
 
-    // Create particles - reasonable count for performance
-    const particleCount = window.innerWidth > 768 ? 80 : 40;
+    // Create particles - reduced for faster load
+    const particleCount = window.innerWidth > 768 ? 50 : 25;
     const particles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
