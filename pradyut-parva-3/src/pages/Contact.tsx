@@ -196,14 +196,14 @@ const Contact: React.FC = () => {
                 <div className="relative bg-white/5 backdrop-blur-md border border-pp-gold/30 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                   <div className="w-48 h-48 mx-auto bg-white rounded-xl p-3 mb-4">
                     <img 
-                      src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(siteConfig.registrationUrl)}`}
+                      src="/assets/qr-code.png"
                       alt="Registration QR Code"
                       className="w-full h-full"
                       loading="lazy"
                     />
                   </div>
                   <h4 className="font-bold text-white mb-2 text-lg">Register Now</h4>
-                  <p className="text-sm text-pp-gold font-medium mb-1">Google Form</p>
+                  <p className="text-sm text-pp-gold font-medium mb-1">Scan QR Code</p>
                   <p className="text-xs text-gray-400">Scan to register for events instantly</p>
                 </div>
               </div>
