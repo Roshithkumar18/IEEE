@@ -32,36 +32,164 @@ const About: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         <div className="section-container relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8 text-center">About The Event</h2>
+          <div className="max-w-6xl mx-auto">
+            {/* Event Poster */}
+            <div className="mb-12">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-pp-gold/30 to-pp-primary/30 rounded-3xl opacity-50 group-hover:opacity-75 blur-xl transition-all duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 overflow-hidden">
+                  <img 
+                    src="/assets/event-poster.png"
+                    alt="Pradyut Parva 3 - Event Poster"
+                    className="w-full h-auto rounded-2xl"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-8 text-center">
+              🌟 Get Ready for PRADYUT PARVA 3! 🌟
+            </h2>
             
             <div className="relative group mb-8">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pp-gold/20 to-pp-gold/10 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10">
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Pradyut Parva 3 is a celebration of technology, talent and togetherness, bringing students 
-                  together through technical challenges, innovation activities, competitions, networking and 
-                  creative experiences. The event embodies the spirit of collaboration and innovation that 
-                  defines the IEEE student community.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  With the theme <strong className="text-pp-gold">{siteConfig.theme}</strong>, 
-                  Pradyut Parva 3 aims to inspire students to ignite their passion for technology, 
-                  innovate with creative solutions, and make a lasting impact on the engineering community.
-                </p>
-                <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
-                    Ideas Unite
-                  </span>
-                  <span className="text-pp-gold text-2xl">•</span>
-                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
-                    Communities Thrive
-                  </span>
-                  <span className="text-pp-gold text-2xl">•</span>
-                  <span className="px-6 py-3 bg-pp-gold/10 border border-pp-gold/30 text-pp-gold rounded-full font-semibold hover:bg-pp-gold/20 transition-all duration-300">
-                    Technology | People | Purpose
-                  </span>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-pp-gold mb-4">IEEE Day 2026</h3>
+                  <h4 className="text-xl font-semibold text-white mb-2">💫 PRADYUT PARVA 3 – "A Light of Brilliance"</h4>
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    Following the success of our previous editions, Pradyut Parva 3 returns with renewed energy, creativity and enthusiasm. This year's celebration brings together students from different colleges to showcase their technical skills, creativity, teamwork and innovative thinking.
+                  </p>
                 </div>
+
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-pp-gold/20 to-pp-primary/20 border border-pp-gold/30 rounded-2xl">
+                    <span className="text-2xl">✨</span>
+                    <span className="text-xl font-bold text-pp-gold">Ignite • Innovate • Impact</span>
+                    <span className="text-2xl">✨</span>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <span>⚡</span>
+                  <span>What Awaits You?</span>
+                </h3>
+
+                {/* Technical Events */}
+                <div className="mb-8 p-6 bg-white/5 backdrop-blur-sm border border-pp-primary/30 rounded-xl">
+                  <h4 className="text-xl font-bold text-pp-primary mb-4 flex items-center gap-2">
+                    <span>💻</span>
+                    <span>Technical Events</span>
+                  </h4>
+                  <ul className="grid md:grid-cols-2 gap-3 text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>CODEX</strong> – Code Debugging</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>WEBNOVA</strong> – Webathon</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>WAVENOVA</strong> – Antenna Design</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>TECHNOVA</strong> – Technical Quiz</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>ROBORUSH</strong> – Robo Race</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>CIRCUITX</strong> – Circuit Debugging</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>HACKNOVA</strong> – 24-Hour Hackathon</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-gold mt-1">•</span>
+                      <span><strong>TECHTALK</strong> – Technical Debate</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Non-Technical Events */}
+                <div className="mb-8 p-6 bg-white/5 backdrop-blur-sm border border-pp-gold/30 rounded-xl">
+                  <h4 className="text-xl font-bold text-pp-gold mb-4 flex items-center gap-2">
+                    <span>🎯</span>
+                    <span>Non-Technical Events</span>
+                  </h4>
+                  <ul className="grid md:grid-cols-2 gap-3 text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>PROMPTX</strong> – Prompt</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>TECHTREK</strong> – Treasure Hunt</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>GAMEON</strong> – Gaming</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>MINDX</strong> – AI vs Human</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>CONNECTX</strong> – Connections</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-pp-primary mt-1">•</span>
+                      <span><strong>PIXELVERSE</strong> – Photography</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Event Highlights */}
+                <div className="grid md:grid-cols-3 gap-4 mb-8">
+                  <div className="text-center p-4 bg-pp-gold/10 border border-pp-gold/30 rounded-xl">
+                    <div className="text-2xl mb-2">🏆</div>
+                    <div className="font-bold text-white">Cash Prizes</div>
+                    <div className="text-sm text-gray-400">& Certificates</div>
+                  </div>
+                  <div className="text-center p-4 bg-pp-primary/10 border border-pp-primary/30 rounded-xl">
+                    <div className="text-2xl mb-2">🤝</div>
+                    <div className="font-bold text-white">Connect</div>
+                    <div className="text-sm text-gray-400">Compete • Collaborate</div>
+                  </div>
+                  <div className="text-center p-4 bg-pp-gold/10 border border-pp-gold/30 rounded-xl">
+                    <div className="text-2xl mb-2">💡</div>
+                    <div className="font-bold text-white">Explore</div>
+                    <div className="text-sm text-gray-400">Showcase • Impact</div>
+                  </div>
+                </div>
+
+                {/* Event Details */}
+                <div className="text-center space-y-4 mb-6">
+                  <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
+                    <span className="text-2xl">📅</span>
+                    <span className="text-lg font-semibold text-white">7th & 8th October 2026</span>
+                  </div>
+                  <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl">
+                    <span className="text-2xl">📍</span>
+                    <span className="text-lg font-semibold text-white">Sri Sairam College of Engineering, Anekal, Bengaluru</span>
+                  </div>
+                </div>
+
+                <div className="text-center text-xl font-bold text-pp-gold">
+                  🌟 Where Ideas Unite, Communities Thrive! 🌟
+                </div>
+
+                <p className="text-center text-gray-300 mt-6 text-lg">
+                  Join us for two exciting days of technology, talent, creativity and togetherness. Come, participate, compete and make your mark at PRADYUT PARVA 3! ⚡✨
+                </p>
               </div>
             </div>
           </div>

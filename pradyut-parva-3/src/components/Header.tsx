@@ -31,6 +31,7 @@ const Header: React.FC = () => {
     { name: 'NON-TECHNICAL', href: '/events?category=non-technical' },
     { name: 'SCHEDULE', href: '/schedule' },
     { name: 'ABOUT', href: '/about' },
+    { name: 'NAVIGATION', href: 'https://navigation-sairam.vercel.app/', external: true },
     { name: 'GUIDELINES', href: '/guidelines' },
     { name: 'CONTACT', href: '/contact' },
   ];
@@ -100,25 +101,39 @@ const Header: React.FC = () => {
             {/* Center: Navigation (Desktop) with enhanced hover */}
             <nav className="hidden xl:flex items-center space-x-6">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-sm font-medium transition-all duration-300 relative py-1 group ${
-                    isActive(item.href)
-                      ? 'text-pp-gold'
-                      : 'text-gray-400 hover:text-gray-200'
-                  }`}
-                >
-                  {item.name}
-                  {/* Active indicator with glow */}
-                  {isActive(item.href) && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-pp-primary to-transparent animate-pulse"></span>
-                  )}
-                  {/* Hover underline animation */}
-                  {!isActive(item.href) && (
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium transition-all duration-300 relative py-1 group text-gray-400 hover:text-gray-200"
+                  >
+                    {item.name}
+                    {/* Hover underline animation */}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pp-primary/50 to-pp-gold/50 group-hover:w-full transition-all duration-300"></span>
-                  )}
-                </Link>
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`text-sm font-medium transition-all duration-300 relative py-1 group ${
+                      isActive(item.href)
+                        ? 'text-pp-gold'
+                        : 'text-gray-400 hover:text-gray-200'
+                    }`}
+                  >
+                    {item.name}
+                    {/* Active indicator with glow */}
+                    {isActive(item.href) && (
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-pp-primary to-transparent animate-pulse"></span>
+                    )}
+                    {/* Hover underline animation */}
+                    {!isActive(item.href) && (
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pp-primary/50 to-pp-gold/50 group-hover:w-full transition-all duration-300"></span>
+                    )}
+                  </Link>
+                )
               ))}
             </nav>
             
@@ -169,19 +184,33 @@ const Header: React.FC = () => {
           <div className="xl:hidden border-t border-white/5 bg-pp-background-deep/98 backdrop-blur-md animate-slide-down">
             <nav className="section-container py-4 space-y-2">
               {navigation.map((item, index) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                    isActive(item.href)
-                      ? 'bg-pp-gold/20 text-pp-gold border border-pp-gold/30 shadow-lg shadow-pp-gold/10'
-                      : 'text-gray-400 hover:bg-white/5 hover:text-gray-200 hover:translate-x-1'
-                  }`}
-                  style={{ animationDelay: `${index * 30}ms` }}
-                >
-                  {item.name}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 text-gray-400 hover:bg-white/5 hover:text-gray-200 hover:translate-x-1"
+                    style={{ animationDelay: `${index * 30}ms` }}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                      isActive(item.href)
+                        ? 'bg-pp-gold/20 text-pp-gold border border-pp-gold/30 shadow-lg shadow-pp-gold/10'
+                        : 'text-gray-400 hover:bg-white/5 hover:text-gray-200 hover:translate-x-1'
+                    }`}
+                    style={{ animationDelay: `${index * 30}ms` }}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </nav>
           </div>
