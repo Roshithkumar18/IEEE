@@ -86,7 +86,7 @@ export const technicalEvents: Event[] = [
     icon: 'globe',
     details: {
       date: '7th October 2026',
-      venue: 'ISE Lab',
+      venue: 'Room no : 326',
       format: 'GitHub submission with live demo',
       eligibility: 'Open to all engineering students',
       teamSize: '1-2 members',
@@ -104,7 +104,7 @@ export const technicalEvents: Event[] = [
         'Team size: 1-2 members',
         'Theme released one week before event via @ieee.ssce Instagram',
         'Upload final project to GitHub repository',
-        'Submit link one day before event (October 14, 11:59PM)',
+        'Submit link one day before event (October 6, 11:59PM)',
         'Repository must include: source code, ReadMe (details, setup, team info), screenshots/demo link',
         'Late submissions not accepted',
         'Any language/framework/library can be used',
@@ -243,12 +243,14 @@ export const technicalEvents: Event[] = [
       },
       facultyCoordinator: 'Mrs. Dhamarai Selvi K.V',
       eventLeader: {
-        name: 'Nandhini',
+         name: 'Bhoomika M', phone: '8660093669' ,
       },
       studentCoordinators: [
-        { name: 'Bhoomika [III AIML]', phone: '8660099369' },
+        
         { name: 'Vaishali B', phone: '9739371609' },
         { name: 'Pallavi S', phone: '9901381770' },
+        { name: 'Gagana', phone: '' },
+        { name: 'Fouziya', phone: '' },
       ],
       rules: [
         'Team must contain 3 members',
@@ -602,6 +604,7 @@ export const nonTechnicalEvents: Event[] = [
         { name: 'Udhay N', phone: '9345520849' },
         { name: 'Gokulakrishnan', phone: '9789138574' },
         { name: 'Lekhana S', phone: '7892987831' },
+        { name: 'Nandhini', phone: '' },
       ],
       rules: [
         'Team size: must be Individual',
