@@ -27,8 +27,6 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'HOME', href: '/' },
     { name: 'EVENTS', href: '/events' },
-    { name: 'TECHNICAL', href: '/events?category=technical' },
-    { name: 'NON-TECHNICAL', href: '/events?category=non-technical' },
     { name: 'SCHEDULE', href: '/schedule' },
     { name: 'ABOUT', href: '/about' },
     { name: 'NAVIGATION', href: 'https://navigation-sairam.vercel.app/', external: true },
@@ -99,7 +97,7 @@ const Header: React.FC = () => {
             </div>
             
             {/* Center: Navigation (Desktop) with enhanced hover */}
-            <nav className="hidden xl:flex items-center space-x-6">
+            <nav className="hidden xl:flex items-center space-x-5">
               {navigation.map((item) => (
                 item.external ? (
                   <a
@@ -107,7 +105,7 @@ const Header: React.FC = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium transition-all duration-300 relative py-1 group text-gray-400 hover:text-gray-200"
+                    className="text-sm font-medium transition-all duration-300 relative py-1 group text-gray-400 hover:text-gray-200 whitespace-nowrap"
                   >
                     {item.name}
                     {/* Hover underline animation */}
@@ -117,7 +115,7 @@ const Header: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-sm font-medium transition-all duration-300 relative py-1 group ${
+                    className={`text-sm font-medium transition-all duration-300 relative py-1 group whitespace-nowrap ${
                       isActive(item.href)
                         ? 'text-pp-gold'
                         : 'text-gray-400 hover:text-gray-200'
